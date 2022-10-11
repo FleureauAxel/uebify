@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Uebify | Web Agency</title>
+    <link rel="icon" type="image/png" href="img/favicons/favicon.ico" sizes="16x16">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/android-chrome-512x512.png">
+    
+    <meta name="msapplication-TileColor" content="#080B14">
+    <meta name="theme-color" content="#080B14">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.11.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.11.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.11.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top_panel">
+            <div class="wrap">
+                <div class="wrap_float">
+                    <div class="left">
+                        <a href="index.php" class="logo">
+                            <div style="height: 110px; width: 110px;">
+                                <img src="img/favicons/favicon-32x32.png"
+                                    style="height: 100%; width: 100%; object-fit: fill;" alt="">
+                            </div>
+                        </a>
+                        <div class="menu" id="menu">
+                            <div class="scroll">
+                                <ul id="menu-ul">
+                                    <li>
+                                        <a href="index.php"><span>Home</span></a>
+                                    </li>
+                                    <li><a href="#obiettivi" class="scroll_down js-anchor"><span>Obiettivi</span></a>
+                                    </li>
+                                    <li><a href="#mission" class="scroll_down js-anchor"><span>Mission</span></a></li>
+                                    <li><a href="#clienti" class="scroll_down js-anchor"><span>Clienti</span></a></li>
+                                    <li><a href="#valori" class="scroll_down js-anchor"><span>Valori</span></a></li>
+                                    <li><a href="#footer" class=""><span>Contatti</span></a></li>
+                                </ul>
+                                <div class="menu_bottom">
+                                    <div class="tel"><a href="tel:+393466037660">+39 3466037660</a></div>
+                                    <div class="socials">
+                                        <a href="#" class="linked-in"></a>
+                                        <a href="#" class="twitter"></a>
+                                        <a href="#" class="instagram"></a>
+                                    </div>
+                                    <a href="mailto:info@uebify.io" class="btn">CONTATTACI</a>
+                                </div>
+                                <div class="close" id="menu-close"></div>
+                            </div>
+                        </div>
+                        <div class="overlay" id="overlay"></div>
+                    </div>
+                    <div class="right">
+                        <div class="tel"><a href="tel:+393466037660">+39 3466037660</a></div>
+                        <a href="register.php" class="btn">CONTATTACI</a>
+                    </div>
+                    <div class="menu_btn" id="menu_btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="top_slider">
+            <div class="slider_wrap" id="main_slider">
+                <div class="slide" data-color="#FAB31C" data-color-type="dark">
+                    <div class="left" style="background-image: url(img/uebify_land.png)">
+                        <div class="slide_content">
+                            <div>
+                                <h2 class="_title">
+                                    La web agency<br> Che non ti aspetti!
+                                </h2>
+                                <p class="_subtitle">
+                                    offriamo un servizio completo.
+                                </p>
+                                <a href="risalita.php" class="btn">contattaci ora</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="right_top" style="background-color: #F1F1F1;">
+                            <p class="p">
+                                <i></i>
+                                Prenota una <br>Consulenza <a href="trainers.php">Con i nostri <br>Professionisti</a>
+                            </p>
+                        </div>
+                        <div class="right_bottom">
+                            <a class="video_link getModal js-video" data-href="#video" data-src="1I-kKGO7i5E"
+                                style="background-image: url(img/uebify_metal.png);">
+                                <div class="play-btn"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" data-color="#7749FF" data-color-type="dark">
+                    <div class="left" style="background-image: url(img/uebify_land_metal.png)">
+                        <div class="slide_content">
+                            <div>
+                                <h2 class="_title">
+                                    Fissa subito una consulenza gratuita!
+                                </h2>
+                                <p class="_subtitle">
+                                    offriamo per un periodo limitato una analisi aziendale conoscitiva gratuita,
+                                    approfittane ora.
+                                </p>
+                                <a href="risalita.php" class="btn">Contattaci</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="right_top" style="background-color: #F1F1F1;">
+                            <p class="p">
+                                <i></i>
+                                Affidati ai nostri <br>migliori <a href="trainers.htm">professionisti <br>in
+                                    Marketing!</a>
+                            </p>
+                        </div>
+                        <div class="right_bottom">
+                            <a class="video_link getModal js-video" data-href="#video" data-src="Kwn-833mWF0"
+                                style="background-image: url(img/uebify_metal.png)">
+                                <div class="play-btn"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" data-color="#FF5100" data-color-type="dark">
+                    <div class="left" style="background-image: url(img/tabelloni_pubblicita.png)">
+                        <div class="slide_content">
+                            <div>
+                                <h2 class="_title">
+                                    Cerchi pubblicità? offriamo solo il meglio per te!
+                                </h2>
+                                <p class="_subtitle">
+                                    "Le storie ammagliano, ma sono i fatti a trascinare..."
+                                </p>
+                                <a href="risalita.php" class="btn">Informazioni</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="right_top" style="background-color: #F1F1F1;">
+                            <p class="p">
+                                <i></i>
+                                Affidati ai nostri <br>migliori <a href="trainers.htm">professionisti <br>in
+                                    Marketing!</a>
+                            </p>
+                        </div>
+                        <div class="right_bottom">
+                            <a class="video_link getModal js-video" data-href="#video" data-src="BDZDGZvn60k"
+                                style="background-image: url(img/uebify_metal.png)">
+                                <div class="play-btn"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_block">
+                <div class="wrap">
+                    <div class="wrap_float">
+                        <a href="#scrolla" class="scroll_down pulse js-anchor">
+                            Il nostro valore
+                        </a>
+                        <div class="socials">
+                            <a href="#" class="linked-in"></a>
+                            <a href="#" class="twitter"></a>
+                            <a href="#" class="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <div class="arrow prev"></div>
+                <div class="arrow next"></div>
+            </div>
+        </section>
+        <section class="classes" id="obiettivi">
+            <div class="wrap">
+                <div class="wrap_float">
+                    <div class="section_top faded_left">
+                        <h2 class="title">I nostri obiettivi</h2>
+                        <div class="arrows">
+                            <div class="arrow prev">Prec</div>
+                            <div class="arrow next">Succ</div>
+                        </div>
+                    </div>
+                    <div class="section_top faded_left">
+                        <a href="#obiettivi" class="scroll_down js-anchor"
+                            style="text-align: left; color: white; font-size: 150%;"><span>Convertiamo le intenzioni dei
+                                consumatori in <b>revenue per i nostri clienti</b></span></a>
+                    </div>
+                    <div class="slider_wrap">
+                        <div class="classes_slider" id="classes_slider">
+                            <a href="#obiettivi" class="faded_right slide classes_item scroll_down js-anchor"
+                                style="background-color: #FF5100" data-color-type="dark">
+                                <div class="slide_right">
+                                    <div class="image ie-img">
+                                        <img class="js-image" src="img/ecommerce.jpg" alt="ecommerce - mailchimp">
+                                    </div>
+                                </div>
+                                <div class="slide_left">
+                                    <div class="_category">revenue & acquisition</div>
+                                    <h3 class="_title">Strategie e-commerce</h3>
+                                    <div class="_author">
+                                        <div class="img ie-img">
+                                            <img src="img/icon_ecommerce.png" alt="">
+                                        </div>
+                                        <p class="name">E-retail management</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#obiettivi" class="faded_right slide classes_item scroll_down js-anchor"
+                                style="background-color: #7749FF" data-color-type="dark">
+                                <div class="slide_right">
+                                    <div class="image ie-img">
+                                        <img class="js-image" src="img/user-experience.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="slide_left">
+                                    <div class="_category">CRM, D2S, loyalty</div>
+                                    <h3 class="_title">Strategie omnicanale</h3>
+                                    <div class="_author">
+                                        <div class="img ie-img">
+                                            <img src="img/ui-design.png" alt="">
+                                        </div>
+                                        <p class="name">Customers experience</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#obiettivi" class="faded_right slide classes_item scroll_down js-anchor"
+                                style="background-color: #476EFF" data-color-type="dark">
+                                <div class="slide_right">
+                                    <div class="image ie-img">
+                                        <img class="js-image" src="img/launch.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="slide_left">
+                                    <div class="_category">Market analysis</div>
+                                    <h3 class="_title">Lancio prodotti <br>e nuovi mercati</h3>
+                                    <div class="_author">
+                                        <div class="img ie-img">
+                                            <img src="img/startup.png" alt="">
+                                        </div>
+                                        <p class="name">marketing campaigns</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#obiettivi" class="faded_right slide classes_item scroll_down js-anchor"
+                                style="background-color: #FF4F58" data-color-type="dark">
+                                <div class="slide_right">
+                                    <div class="image ie-img">
+                                        <img class="js-image" src="img/innovation.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="slide_left">
+                                    <div class="_category">automations</div>
+                                    <h3 class="_title">Innovazione & competitività</h3>
+                                    <div class="_author">
+                                        <div class="img ie-img">
+                                            <img src="img/innovation.png" alt="">
+                                        </div>
+                                        <p class="name">Software development</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog_section" id="mission">
+            <div class="wrap">
+                <div class="wrap_float">
+                    <div class="section_top faded_left">
+                        <h2 class="title">Mission</h2>
+                    </div>
+                    <div class="section_top faded_left">
+                        <a href="#mission" class="scroll_down js-anchor"
+                            style="text-align: left; color: black; font-size: 150%;"><span>Guidare la <b>crescita dei
+                                    nostri clienti</b><br>attraverso <b>strategie di marketing</b> e <b>campagne
+                                    pubblicitarie</b><br> cucite sugli <b>obiettivi di business</b></span></a>
+                    </div>
+                    <div class="section_content">
+                        <a href="#mission" class="blog_item scroll_down js-anchor">
+                            <div class="img ie-img faded_left">
+                                <img src="img/mission_ecommerce.jpg" alt=""> <!-- prendere immagini webcam da db-->
+                            </div>
+                            <!--<p class="_date"><span class="js-day"></span> <span class="js-month"></span></p>-->
+                            <h3 class="_title">
+                                E-RETAIL MANAGEMENT
+                            </h3>
+                        </a>
+
+                        <a href="#mission" class="blog_item scroll_down js-anchor">
+                            <div class="img ie-img faded_down" style="background-color: #000;">
+                                <img src="img/funnel.jpg" alt="">
+                            </div>
+                            <!--<p class="_date"><span class="js-day"></span> <span class="js-month"></span></p>-->
+                            <h3 class="_title">
+                                MEDIA FULL FUNNEL
+                            </h3>
+                        </a>
+
+                        <a href="#mission" class="blog_item scroll_down js-anchor">
+                            <div class="img ie-img faded_right">
+                                <img src="img/datanalysis.png" alt="">
+                            </div>
+                            <!--<p class="_date"><span class="js-day"></span> <span class="js-month"></span></p>-->
+                            <h3 class="_title">
+                                DATA ANALYSIS
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trainers" id="clienti">
+            <div class="wrap">
+                <script src="js/jquery.min.js"></script>
+                <script src="js/jquery-ui.min.js"></script>
+                <script src="js/device.min.js"></script>
+                <script src="js/lightgallery.js"></script>
+                <script src="js/slick.min.js"></script>
+                <script src="js/jquery.arcticmodal.min.js"></script>
+                <script src="js/scripts.js"></script>
+                <div class="wrap_float">
+                    <div class="section_top faded_left scroll_down js-anchor">
+                        <h2 class="title">Alcuni dei nostri <b>clienti</b></h2>
+                        <div class="arrows">
+                            <div class="arrow prev">Prec</div>
+                            <div class="arrow next">Succ</div>
+                        </div>
+
+                    </div>
+                    <div class="section_content">
+                        <div class="trainers_slider" id="trainers_slider">
+                            <div class="item faded_top">
+                                <a href="#clienti" class="photo ie-img scroll_down js-anchor">
+                                    <img src="img/punto-salute.png" alt="">
+                                </a>
+                                <a href="#clienti" class="info">
+                                    <div class="name">Punto Salute</div>
+                                    <div class="category">Medical</div>
+                                </a>
+                                <div class="socials">
+                                    <a href="#" class="linked-in"></a>
+                                    <a href="#" class="twitter"></a>
+                                    <a href="#" class="instagram"></a>
+                                </div>
+                            </div>
+
+                            <div class="item faded_down">
+                                <a href="#clienti" class="photo ie-img scroll_down js-anchor">
+                                    <img src="img/adimo3d.png" alt="">
+                                </a>
+                                <a href="#clienti" class="info">
+                                    <div class="name">Adimo3D</div>
+                                    <div class="category">4.0 Industry</div>
+                                </a>
+                                <div class="socials">
+                                    <a href="#" class="linked-in"></a>
+                                    <a href="#" class="twitter"></a>
+                                    <a href="#" class="instagram"></a>
+                                </div>
+                            </div>
+
+                            <div class="item faded_top">
+                                <a href="#clienti" class="photo ie-img scroll_down js-anchor">
+                                    <img src="img/tubaro.png" alt="">
+                                </a>
+                                <a href="#clienti" class="info">
+                                    <div class="name">Tubaro & Co</div>
+                                    <div class="category">Real Estate</div>
+                                </a>
+                                <div class="socials">
+                                    <a href="#" class="linked-in"></a>
+                                    <a href="#" class="twitter"></a>
+                                    <a href="#" class="instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video_section ie-img">
+            <img src="img/landscape.png" class="img" alt="">
+            <div class="wrap faded_down">
+                <div class="wrap_float">
+                    <h2 class="title">
+                        SCOPRI I NOSTRI <br>SERVIZI DI <br><b>RIPRESE AEREE!</b>
+                    </h2>
+                    <div class="play_btn getModal js-video" data-href="#video" data-src="Kwn-833mWF0">
+                        Approfitta delle nostre <br> offerte
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_description" id="section_description">
+            <div class="sDcontainer wrap">
+                <div class="faded_down wrap_float" id="valori">
+                    <h2 class="title">I NOSTRI VALORI</h2>
+                    <p class="block text" style="font-size: 150%;">
+                        <b>Integrità Empatia Progresso</b><br>Creiamo valore per dare valore e accettiamo ogni sfida
+                        necessaria a raggiungere il <b>massimo dal potenziale.</b><br>Aiutiamo i nostri clienti a
+                        conoscere in modo più approfondito gli utenti e le loro necessità, al fine di avere un impatto
+                        decisivo e misurabile sul loro business.
+                    </p>
+                    <p class="block text" style="font-size: 150%;" id="scrolla">
+                        <b><br>La fiducia è al centro della nostra filosofia.</b>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="instagram-block">
+            <a class="img1 faded_left item ie-img">
+                <img src="img/carousel_uebify1.JPG" alt="">
+            </a>
+            <a class="img2 faded_top item ie-img">
+                <img src="img/carousel_uebify2.JPG" alt="">
+            </a>
+            <a class="img3 faded_down item ie-img">
+                <img src="img/carousel_uebify3.JPG" alt="">
+            </a>
+            <a class="img4 faded_right item ie-img">
+                <img src="img/carousel_uebify4.JPG" alt="">
+            </a>
+            <!--<button class="btn submit" id="find-me">EMERGENZA</button>
+    
+    
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong id="status" style="color:white;"></strong>
+      <a id = "map-link" style="color:white;" target="_blank"></a>
+    </div>-->
+            <footer class="footer">
+                <div class="footer_top" id="footer">
+                    <div class="wrap">
+                        <div class="wrap_float">
+                            <div class="left">
+                                <a href=".." class="block logo">
+                                    <div style="height: 110px; width: 110px;">
+                                        <img src="img/favicons/favicon-32x32.png"
+                                            style="height: 100%; width: 100%; object-fit: fill;" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="center">
+                                <ul class="menu">
+                                    <li><a href="#obiettivi" class="scroll_down js-anchor"><span>Obiettivi</span></a>
+                                    </li>
+                                    <li><a href="#mission" class="scroll_down js-anchor"><span>Mission</span></a></li>
+                                    <li><a href="#clienti" class="scroll_down js-anchor"><span>Clienti</span></a></li>
+                                    <li><a href="#valori" class="scroll_down js-anchor"><span>Valori</span></a></li>
+                                    <li><a href="#footer"><span>Contatti</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <div class="socials">
+                                    <a href="#" class="linked-in"></a>
+                                    <a href="#" class="twitter"></a>
+                                    <a href="#" class="instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_center">
+                    <div class="wrap">
+                        <div class="wrap_float">
+                            <div class="left">
+                                <h4 class="block _title">NEWSLETTER</h4>
+                                <p class="p">
+                                    Iscriviti per rimanere aggiornato. <br>Promettiamo di non mandare spam.
+                                </p>
+                                <form class="form" onsubmit="WriteToFile(this)">
+                                    <input type="text" class="input" placeholder="Email" name="email">
+                                    <button class="submit js-send-btn"></button>
+                                </form>
+                            </div>
+                            <div class="center">
+                                <div class="col" style="padding-left: 10%;">
+                                    <h4 class="block _title">AZIENDA</h4>
+                                    <ul>
+                                        <li><a href="index.php">Home</a></li>
+                                        <li><a href="#">About us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <h4 class="block _title">COSA FACCIAMO</h4>
+                                    <ul>
+                                        <li><a href="#mission">Mission</a></li>
+                                        <li><a href="#obiettivi">Marketing & Sviluppo</a></li>
+                                        <li><a href="#footer">Contatti</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4 class="block _title">CONTATTACI</h4>
+                                <p class="p">
+                                    Piazza Italia 19, 35085, Friuli Venezia-Giulia [PN]
+                                </p>
+                                <div class="tel">
+                                    <a href="tel:+393466037660">+ 39 3466037660</a>
+                                </div>
+                                <div class="email">
+                                    <a href="mailto:info@uebify.io">info@uebify.io</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="wrap">
+                        <div class="wrap_float">
+                            <div style="width: 50%;">Copyright © 2022 Uebify. All Rights Reserved</div>
+
+                            <div style="width: 50%; text-align: right;">
+                                Powered by <a href="http://uebify.io" target="_blank"> UEBIFY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <div style="display: none;">
+                <div class="modal modal_video" id="video">
+                    <div class="modal_wrap">
+                        <div class="video" id="video_wrap"></div>
+                        <div class="modal_close"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: none;">
+                <div class="modal modal_window modal_success" id="success">
+                    <div class="modal_wrap">
+                        <h2 class="modal_title">
+                            Grazie! I tuoi dati sono stati inviati
+                        </h2>
+                        <div class="modal_subtitle">
+                            Ti aspettiamo presto!
+                        </div>
+                        <div class="modal_close"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONSENSO COOKIE -->
+            <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8"
+                data-domain-script="37a6175c-5d3d-4754-a4c7-9f2d7111ebb4" async=""></script>
+            <!-- EMERGENZA GPS -->
+            <script>
+                function geoFindMe() {
+
+                    const status = document.querySelector('#status');
+                    const mapLink = document.querySelector('#map-link');
+
+                    mapLink.href = '';
+                    mapLink.textContent = '';
+
+                    function success(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+
+                        status.textContent = '';
+                        mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+                        mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+                    }
+
+                    function error() {
+                        status.textContent = 'Unable to retrieve your location';
+                    }
+
+                    if (!navigator.geolocation) {
+                        status.textContent = 'Geolocation is not supported by your browser';
+                    } else {
+                        status.textContent = 'Locating…';
+                        navigator.geolocation.getCurrentPosition(success, error);
+                    }
+
+                }
+
+                document.querySelector('#find-me').addEventListener('click', geoFindMe);
+            </script>
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery-ui.min.js"></script>
+            <script src="js/device.min.js"></script>
+            <script src="js/lightgallery.js"></script>
+            <script src="js/slick.min.js"></script>
+            <script src="js/jquery.arcticmodal.min.js"></script>
+            <script src="js/scripts.js"></script>
+
+            <script type ="text/javascript">
+                function WriteToFile(passForm) {
+               
+                   set fso = CreateObject("Scripting.FileSystemObject");  
+                   set s = fso.OpenTextFile("mails.txt", ForAppending, false);
+                   s.writeline(document.passForm.email.value);
+                   s.Close();
+                }
+            </script>
+
+            <script type="module">
+                // Import the functions you need from the SDKs you need
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+                import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
+                // TODO: Add SDKs for Firebase products that you want to use
+                // https://firebase.google.com/docs/web/setup#available-libraries
+
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                const firebaseConfig = {
+                    apiKey: "AIzaSyBH-fbb0GalsyVmupNUWfdLkxk_WtqKiHE",
+                    authDomain: "uebify-dd15a.firebaseapp.com",
+                    projectId: "uebify-dd15a",
+                    storageBucket: "uebify-dd15a.appspot.com",
+                    messagingSenderId: "888438688033",
+                    appId: "1:888438688033:web:4335ff08a5dfed84e85660",
+                    measurementId: "G-QL3TWEL2FQ"
+                };
+
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                const analytics = getAnalytics(app);
+
+            </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const loadEl = document.querySelector('#load');
+                    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                    // // The Firebase SDK is initialized and available here!
+                    //
+                    // firebase.auth().onAuthStateChanged(user => { });
+                    // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+                    // firebase.firestore().doc('/foo/bar').get().then(() => { });
+                    // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+                    // firebase.messaging().requestPermission().then(() => { });
+                    // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+                    // firebase.analytics(); // call to activate
+                    // firebase.analytics().logEvent('tutorial_completed');
+                    // firebase.performance(); // call to activate
+                    //
+                    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+                    try {
+                        let app = firebase.app();
+                        let features = [
+                            'auth',
+                            'database',
+                            'firestore',
+                            'functions',
+                            'messaging',
+                            'storage',
+                            'analytics',
+                            'remoteConfig',
+                            'performance',
+                        ].filter(feature => typeof app[feature] === 'function');
+                        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+                    } catch (e) {
+                        console.error(e);
+                        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+                    }
+                });
+            </script>
+</body>
+
+</html>
