@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+ //#region fadeTopRightDownLeft
     const fadeL = document.querySelectorAll(".faded_left"),
     fadeR = document.querySelectorAll(".faded_right"),
     fadeT = document.querySelectorAll(".faded_top"),
@@ -11,6 +11,14 @@ $(document).ready(function(){
     fadeTpad = document.querySelectorAll(".faded_top_pad"),
     fadeDpad = document.querySelectorAll(".faded_down_pad");
 
+    /*
+        Copypaste da sito documentazione: https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-rootmargin
+
+        "5px"                // all margins set to 5px
+        "5px 10px"           // top & bottom = 5px, right & left = 10px
+        "-10px 5px 8px"      // top = -10px, right & left = 5px, bottom = 8px
+        "-10px -5px 5px 8px" // top = -10px, right = -5px, bottom = 5px, left = 8px
+    */
 
     const appearOptions ={
         threshold: 0,
@@ -18,7 +26,8 @@ $(document).ready(function(){
     };
 
     const appearOptions1 ={
-        rootMargin: "0px 0px 0px 0px"
+        threshold: 0,
+        rootMargin: "150px 150px 150px 150px"
     };
     
     const udOnScroll = new IntersectionObserver(function(
@@ -194,7 +203,8 @@ $(document).ready(function(){
         topOnScrollPad.observe(fader);
     });
 
-    
+    //#endregion
+
     //OS and browsers check========================/
     function getOS() {
       var userAgent = window.navigator.userAgent,
@@ -1099,7 +1109,7 @@ $(document).ready(function(){
                 if (thisLink.hasClass("js-video")) {
                     var src = thisLink.attr("data-src");
 
-                    $("#video_wrap").append('<iframe src="https://www.youtubo.com/embed/'+src+'?rel=0&autoplay=1" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0"></iframe>')
+                    $("#wrap").append('<iframe src="https://www.youtube.com/embed/'+"src"+'?rel=0&autoplay=1" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0"></iframe>')
                 }
             },
             afterClose: function(data, el) {
@@ -1118,8 +1128,25 @@ $(document).ready(function(){
     //temp scripts
     $('.js-send-btn').on('click', function(e){
         e.preventDefault();
-        $.arcticmodal('close');
-        $("#success").arcticmodal();
+
+        const fname = document.getElementById('mce-FNAME'),
+        email = document.getElementById('mce-EMAIL'),
+        tel = document.getElementById('mce-PHONE');
+
+        var valid = true;
+        //$.arcticmodal('close');
+
+        //controlliamo cosa scrive l'utente
+        if(fname.value.length < 1 || email.value.length < 6 || tel.value.length < 10) 
+        {
+            alert('Compila correttamente tutti i campi per proseguire.\nTi ringraziamo della pazienza.');
+            valid = false;
+        }
+
+        if(valid)
+        {
+            $("#success").arcticmodal();
+        }
     });
     
 });	
